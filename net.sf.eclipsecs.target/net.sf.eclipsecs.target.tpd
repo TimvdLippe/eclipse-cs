@@ -8,3 +8,7 @@ location "http://download.eclipse.org/releases/juno/" {
 	// e4.ui has dependencies to EMF, those are not actually needed by eclipse-cs itself
 	org.eclipse.emf.feature.group lazy
 }
+
+location "http://download.eclipse.org/egit/updates/" {
+	org.eclipse.jgit.feature.group lazy
+}

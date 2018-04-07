@@ -3,6 +3,7 @@ package net.sf.eclipsecs.sample.checks;
 import com.puppycrawl.tools.checkstyle.api.AbstractCheck;
 import com.puppycrawl.tools.checkstyle.api.DetailAST;
 import com.puppycrawl.tools.checkstyle.api.TokenTypes;
+import org.eclipse.jgit.api.CheckoutCommand;
 
 public class MethodLimitCheck extends AbstractCheck {
 
@@ -29,6 +30,7 @@ public class MethodLimitCheck extends AbstractCheck {
 
   @Override
   public void visitToken(DetailAST ast) {
+    System.out.println(CheckoutCommand.class.getName());
     // find the OBJBLOCK node below the CLASS_DEF/INTERFACE_DEF
     DetailAST objBlock = ast.findFirstToken(TokenTypes.OBJBLOCK);
     // count the number of direct children of the OBJBLOCK
